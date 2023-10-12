@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "jost";
+}
+*::-moz-selection {
+  color: white;
+  background-color: gray;
+}
+*::selection {
+  color: white;
+  background-color: gray;
+}
+
+.bgImg {
+  background: url(./imgs/bg.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.card-main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+img {
+  border: 5px solid rgba(255, 255, 255, 0.606);
+  border-radius: 50%;
+  max-width: 320px;
+  width: 30vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.responsive-div {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.067);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.responsive-div .input {
+  border: 2px solid rgba(255, 255, 255, 0.455);
+  border-radius: 7px;
+  padding: 0.5rem 1rem;
+  margin: 0.7rem 0rem 2rem 0rem;
+  display: flex;
+}
+.responsive-div .input input {
+  letter-spacing: 0.06rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.772);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 30rem;
+}
+.responsive-div .input input::-moz-placeholder {
+  color: rgba(128, 128, 128, 0.377);
+  text-transform: capitalize;
+}
+.responsive-div .input input::placeholder {
+  color: rgba(128, 128, 128, 0.377);
+  text-transform: capitalize;
+}
+.responsive-div .input button {
+  border: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.455);
+  letter-spacing: 0.06rem;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  transition: 250ms ease;
+  letter-spacing: 0.06rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+.responsive-div .input button:active {
+  transform: scale(0.95);
+}
+
+.responsive-div2 {
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55vh;
+  gap: 5rem;
+}
+
+.heading h1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.heading h5 {
+  color: rgba(255, 255, 255, 0.421);
+}
+
+.follows ul {
+  display: flex;
+  gap: 5rem;
+}
+.follows ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.follows ul li label {
+  color: rgba(255, 255, 255, 0.752);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+.follows ul li var {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 0.01rem;
+}
+
+.bio {
+  max-width: 30rem;
+  width: 100%;
+}
+.bio label {
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.01rem;
+  color: rgba(255, 255, 255, 0.544);
+}
+.bio p {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.01rem;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+@media screen and (max-width: 900px) {
+  .follows ul {
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .follows ul {
+    gap: 3rem;
+  }
+  .responsive-div2 {
+    flex-direction: column;
+    height: unset;
+    gap: 2rem;
+  }
+  .responsive-div {
+    height: 47rem;
+  }
+  .responsive-div .input {
+    margin-bottom: 1rem;
+  }
+  .responsive-div .input input {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .heading h1 {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 500px) {
+  .responsive-div .input {
+    margin-bottom: 2rem;
+  }
+  .responsive-div .input input {
+    width: 15rem;
+  }
+  .bio {
+    max-width: 20rem;
+  }
+  .follows ul {
+    gap: 2rem;
+  }
+  .follows ul li label {
+    font-size: 0.9rem;
+    letter-spacing: unset;
+  }
+  .follows ul li var {
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: unset;
+  }
+}
+@media screen and (max-width: 415px) {
+  .responsive-div {
+    width: 27rem;
+    padding: 1rem;
+  }
+  .responsive-div .input input {
+    width: 12rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .responsive-div {
+    width: 18.5rem;
+    padding: 1rem;
+  }
+  .responsive-div .input input {
+    width: 12rem;
+  }
+}/*# sourceMappingURL=stye.css.map */
